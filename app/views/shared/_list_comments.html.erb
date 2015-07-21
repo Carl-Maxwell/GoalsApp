@@ -1,0 +1,7 @@
+<% if comments %>
+  <ul>
+    <% comments.each do |comment| %>
+      <li> <%= comment.body %> - says <%= comment.author.username %> </li>
+    <% end %>
+  </ul>
+<% end %>

@@ -7,6 +7,10 @@ class User < ActiveRecord::Base
 
   has_many :goals
 
+  has_many :authored_comments, class_name: Comment, foreign_key: :author_id
+
+  include Commentable
+
   after_initialize :ensure_session_token
 
   def password=(password)

@@ -7,6 +7,8 @@ class Goal < ActiveRecord::Base
 
   belongs_to :user
 
+  include Commentable
+
   def default_completed
     self.completed ||= false
   end
