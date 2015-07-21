@@ -1,5 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe User, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  # unit test associations and validations with shoulda-matchers
+  it { should have_many(:goals) }
 end

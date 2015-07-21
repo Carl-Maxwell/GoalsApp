@@ -34,6 +34,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bcrypt'
 
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'quiet_assets'
+end
+
 group :development, :test do
   gem "byebug"
   gem "rspec-rails"

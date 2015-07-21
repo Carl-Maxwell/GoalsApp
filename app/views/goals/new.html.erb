@@ -1,0 +1,31 @@
+<h1>New Goal</h1>
+
+<form action="<%= goals_url %>" method="post">
+  <input type="hidden"
+    name="authenticity_token"
+    value="<%= form_authenticity_token %>">
+
+  <label for="name">Name: </lable>
+  <input type="text"
+    id="name"
+    name="goal[name]"
+    value="<%= @goal.name %>">
+  <br />
+
+  Public? :<br/>
+  <input type="radio"
+    id="public_goal_true"
+    name="goal[public_goal]"
+    value="true">
+  <label for="public_goal_true">True</lable>
+  <br/>
+
+  <input type="radio"
+    id="public_goal_false"
+    name="goal[public_goal]"
+    value="false">
+  <label for="public_goal_false">False</lable>
+  <br/>
+
+  <input type="submit" value="Create Goal">
+</form>

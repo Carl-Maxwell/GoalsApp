@@ -1,0 +1,10 @@
+<ul>
+<% @goals.each do |goal| %>
+    <li><%= link_to goal.name, goal_url(goal) %></li>
+<% end %>
+</ul>
+
+<%= link_to "Create Task", new_user_goal_url(@user) %>
+
+<%= link_to "Completed Tasks", user_goals_url(@user, completed: :true) %>
+<%= link_to "Incomplete Tasks", user_goals_url(@user, completed: :false) %>
